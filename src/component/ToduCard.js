@@ -5,7 +5,7 @@ import { Button, Modal, InputGroup, FormControl, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function ToduCard({todu , DELETETODU , EDITTODU}) {
     const [show, setShow] = useState(false);
-    const [textmod, setTextmod] = useState("");
+    const [textmod, setTextmod] = useState(todu.text);
 
 
             
