@@ -14,16 +14,10 @@ function ToduCard({todu , DELETETODU , EDITTODU}) {
 
     const modifytodu = (e) => {
         e.preventDefault()
-        const newtodu = {
-            text: textmod,
-
-        }
-
-
-
-
+        const newtodu = { {...todu , text: textmod, }
+    
         EDITTODU(newtodu)
-        setTextmod(setTextmod)
+        
     }
     return (
         <div className="todo">
@@ -49,7 +43,7 @@ function ToduCard({todu , DELETETODU , EDITTODU}) {
                 <Modal.Body>
                     <Form.Group>
                         
-                        <Form.Control value={todu.text} onChange={(e) => setTextmod(e.target.value)} />
+                        <Form.Control value={textmod} onChange={(e) => setTextmod(e.target.value)} />
                     </Form.Group>
                 </Modal.Body>
                 <Button className="btn" variant="success" type="submit"   onClick={modifytodu}>
