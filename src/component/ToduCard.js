@@ -14,7 +14,7 @@ function ToduCard({todu , DELETETODU , EDITTODU}) {
 
     const modifytodu = (e) => {
         e.preventDefault()
-        const newtodu = { {...todu , text: textmod, }
+        const newtodu =  {...todu , text: textmod, }
     
         EDITTODU(newtodu)
         
